@@ -1,0 +1,107 @@
+:root {
+	--header-height: 200px;
+	--header-btm-mrgn: 30px;
+	--header-whole: calc(var(--header-height) + var(--header-btm-mrgn));
+	--test: var(--header-whole);
+}
+
+/* HEADER */
+div.header {
+	background-color: blue;
+	height: var(--header-height);
+}
+
+/* MAIN WRAPPER */
+
+div#side-nav-wrapper {
+	position: fixed;
+	background-color: grey;
+	top: var(--test);
+	width: 160px;
+	height: 100%;
+}
+
+/* SIDENAV  */
+
+ul.sidenav {
+	list-style: none;
+	padding: 0;	
+}
+
+ul.sidenav:first-child {
+	padding-top: 15px;
+}
+
+ul.sidenav li {
+	padding: 10px;
+}
+
+ul.sidenav li:hover {
+	background-color: rgba(0,0,0,0.6);
+}
+
+ul.sidenav li a {
+	text-decoration: none;
+	color: black;
+}
+
+/* BLOGPOSTS */
+
+div#blog-posts-wrapper {
+	margin-left: 175px;
+	margin-right: 15px;
+}
+
+
+div.blog-post {
+	flex-grow: 1;
+	overflow: hidden;
+	min-width: 180px;
+	max-width: 30.5%;
+	max-height: 190px;
+	position: relative;
+	transition: all 0.3s ease-out;
+	border-color: linear-gradient(red, yellow);
+	border-style: solid;
+	border-width: 0.75px;
+	border-radius: 10px;
+	margin: 10px 1px;
+	padding: 0 0 4px 3px;
+}
+
+div.blog-post:nth-child(3n + 2) {
+	margin: 10px 4%;
+}
+
+@media only sceen and (min-width: 983px) {
+	div.blog-post:nth-child(2n) {
+		margin-left: 0 20%; 
+	}
+}
+
+div.blog-post.toggled {
+	margin: 0;
+	max-width: 100%;
+	max-height: 100%;
+	transition: all 0.3s ease-out;
+}
+
+div.blog-post.margin-toggled {
+	margin: 10px 4%;
+}
+
+span.glyph-remove {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 5px 5px 0 0;
+	cursor: pointer;
+}
+
+/* UTILITY CLASSES */
+
+.d-flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}

@@ -1,0 +1,57 @@
+{% load static %}
+
+<!--OPRAV SIDENAV ABY TOP MAL LEN KLADNÉ HODNOTY-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<link   rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+</head>
+<body>	
+	<!-- Header -->
+	<div class="header jumbotron text-center">	
+		<h1>MyBlog</h1>
+		<p id="demo">Like really, belive me :D</p>
+	</div> <!--header-->
+	
+	<!-- Main wrapper -->
+	<div id="main-wrapper">
+
+		<!-- Side navigation -->
+		<div id="side-nav-wrapper">
+			<ul class="sidenav text-center">
+				<li><a href="#">Blog menu 1</a></li>
+				<li><a href="#">Blog menu 2</a></li>
+				<li><a href="#">Blog menu 3</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+				<li><a href="#">Blog menu 4</a></li>
+			</ul>
+		</div> <!--/#side-nav-->
+        
+        
+
+		<!-- Blog posts -->
+		<div id="blog-posts-wrapper" class="d-flex">
+            
+            {% block content %}
+            {% endblock %}
+        
+		</div> <!--/#blog-posts-wrapper-->
+	</div> <!--/#main-wrapper-->
+	<script src="{% static 'blog/js/blog.js' %}"></script>
+</body>
+</html>
